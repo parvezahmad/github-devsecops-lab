@@ -25,3 +25,5 @@ jobs:
 
       - name: Run application
         run: python app.py
+      - name: Intentional failure
+        run: exit 1
