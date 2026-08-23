@@ -25,6 +25,12 @@ jobs:
 
       - name: Show environment
         run: echo "Application environment is ${{ vars.APP_ENV }}" 
-
+      
+      - name: Use demo secret
+        env:
+          DEMO_SECRET: ${{ secrets.DEMO_SECRET }}
+        run: |
+          echo "Secret is available to this step"
+          echo "Secret length: ${#DEMO_SECRET}"  
       - name: Run application
         run: python app.py
