@@ -1,0 +1,5 @@
+# Default owner for all files
+* @parvezahmad
+
+# GitHub Actions workflows
+.github/workflows/ @parvezahmad

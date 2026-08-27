@@ -1,0 +1,24 @@
+name: My Awesome App
+
+on: push
+
+jobs:
+  unit-testing:
+    name: Unit Testing
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        cmd: [test]
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Checkout
+        run: echo Code Checkout
+
+      - name: Install NodeJS - ${{ matrix.os }}
+        run: echo Installing NodeJS
+
+      - name: Run Tests
+        run: echo npm ${{ matrix.cmd }}
